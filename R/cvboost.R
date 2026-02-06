@@ -90,7 +90,7 @@ cvboost = function(x,
                          print_every_n = print_every_n,
                          verbose = verbose,
                          nthread = nthread,
-                         callbacks = list(xgboost::cb.cv.predict(save_models = TRUE)))
+                         callbacks = list(xgboost::xgb.cb.cv.predict(save_models = TRUE)))
 
       xgb_cvfit <- do.call(xgboost::xgb.cv, xgb_cv_args)
 
